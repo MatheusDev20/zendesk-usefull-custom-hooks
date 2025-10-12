@@ -1,0 +1,29 @@
+{
+  "name": "zendesk-custom-objects-working-hooks",
+  "version": "1.0.0",
+  "description": "React hooks for interacting with Zendesk Custom Objects",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsup src/index.ts --dts --format esm,cjs",
+    "prepublishOnly": "npm run build"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0",
+    "@tanstack/react-query": "^5.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0",
+    "@types/react": "^18.0.0",
+    "@tanstack/react-query": "^5.0.0",
+    "tsup": "^8.0.0"
+  },
+    "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": ["zendesk", "react", "hooks", "custom-objects"],
+  "license": "MIT"
+}
