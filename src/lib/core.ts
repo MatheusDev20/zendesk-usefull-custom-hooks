@@ -27,6 +27,7 @@ export function createNetworkClient(options: NetworkConnector) {
           headers,
           secure: true
         });
+
       } catch (error) {
         const normalizedError = error as any;
         if (!normalizedError.status) throw new Error(String(error));

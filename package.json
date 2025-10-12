@@ -8,7 +8,10 @@
   "files": ["dist"],
   "scripts": {
     "build": "tsup src/index.ts --dts --format esm,cjs",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "npm run build",
+    "release:major": "standard-version --release-as major",
+    "release:minor": "standard-version --release-as minor",
+    "release:patch": "standard-version --release-as patch"
   },
   "peerDependencies": {
     "react": "^18.0.0",
@@ -18,7 +21,8 @@
     "typescript": "^5.0.0",
     "@types/react": "^18.0.0",
     "@tanstack/react-query": "^5.0.0",
-    "tsup": "^8.0.0"
+    "tsup": "^8.0.0",
+    "standard-version": "^9.5.0"
   },
     "repository": {
     "type": "git",

@@ -118,8 +118,6 @@ function usePostCustomObjects<T extends RequiredCustomObjectFields>({
   postActionFn
 }: PostHookInput): PostHookReturn<T> {
   const queryClient = useQueryClient();
-
-  // Validate required parameters
   if (!customObjectKey || typeof customObjectKey !== 'string') {
     throw new Error("invalid customObjectKey");
   }
@@ -153,14 +151,10 @@ function usePostCustomObjects<T extends RequiredCustomObjectFields>({
     },
 
     onSuccess: () => {
-      console.log("Mutation successful, invalidating queries...");
-
-      // Invalidate related query caches
       queryClient.invalidateQueries({
         queryKey: [`query-custom-objects-${customObjectKey}`]
       });
 
-      // Execute post-action callback if provided
       if (postActionFn) postActionFn();
     },
 
@@ -180,4 +174,5 @@ function usePostCustomObjects<T extends RequiredCustomObjectFields>({
 }
 
 export { usePostCustomObjects };
+
 export type { RequiredCustomObjectFields };
