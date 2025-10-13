@@ -17,7 +17,7 @@ yarn add zendesk-custom-objects-working-hooks
 Wrap your app with the `CustomObjectsProvider`:
 
 ```tsx
-import { CustomObjectsProvider } from 'co-custom-hooks';
+import { CustomObjectsProvider } from 'zendesk-custom-objects-working-hooks';
 
 function App() {
   return (
@@ -31,7 +31,7 @@ function App() {
 ### 2. Query Custom Object Records
 
 ```tsx
-import { useQueryCustomObjects } from 'co-custom-hooks';
+import { useQueryCustomObjects } from 'zendesk-custom-objects-working-hooks';
 
 function UsersList() {
   const { data, isLoading, error } = useQueryCustomObjects({
@@ -61,7 +61,7 @@ function UsersList() {
 ### 3. Create New Records
 
 ```tsx
-import { usePostCustomObjects } from 'co-custom-hooks';
+import { usePostCustomObjects } from 'zendesk-custom-objects-working-hooks';
 
 type MyNativeCustomObjectFields = {
   cpf: string;
@@ -103,7 +103,7 @@ function CreateUser() {
 ###  Updating Records 
 
 ```tsx
-import { usePostCustomObjects } from 'co-custom-hooks';
+import { usePostCustomObjects } from 'zendesk-custom-objects-working-hooks';
 
 type FieldsThatIWantToUpdate = {
   gender: string;
