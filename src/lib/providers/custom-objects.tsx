@@ -8,6 +8,7 @@ type Props = {
 type ContextProps = {
   zaf: any
 }
+
 const CustomObjectsContext = createContext<ContextProps | null>(null);
 
 export const CustomObjectsProvider: React.FC<Props> = ({

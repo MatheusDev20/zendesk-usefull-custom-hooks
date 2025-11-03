@@ -1,7 +1,7 @@
 
 import { useQuery, UseQueryOptions } from '@tanstack/react-query';
-import { useInternalZafClient } from '../lib/context';
-import { createNetworkClient } from '../lib/core';
+import { useInternalZafClient } from '../../lib/providers/custom-objects';
+import { createNetworkClient } from '../../lib/core';
 
 /**
  * Parameters for the useQueryCustomObjects hook

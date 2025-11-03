@@ -4,9 +4,9 @@ import {
   useMutation,
   useQueryClient
 } from '@tanstack/react-query';
-import { InsertCOReturn, PostCustomObjectRecord } from '../types';
-import { useInternalZafClient } from '../lib/context';
-import { createNetworkClient } from '../lib/core';
+import { InsertCOReturn, PostCustomObjectRecord } from '../../types';
+import { useInternalZafClient } from '../../lib/providers/custom-objects';
+import { createNetworkClient } from '../../lib/core';
 
 /**
  * Base structure required for all custom object records

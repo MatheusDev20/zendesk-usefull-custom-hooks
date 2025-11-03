@@ -1,6 +1,6 @@
 import { FirePayload, NetworkConnector } from "../types";
 import { convertPathParams, convertQueryParams } from "../utils";
-import { useInternalZafClient } from "./context";
+import { useInternalZafClient } from "./providers/custom-objects";
 
 
 export function createNetworkClient(options: NetworkConnector) {

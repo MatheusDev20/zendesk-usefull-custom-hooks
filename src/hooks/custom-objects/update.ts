@@ -1,7 +1,7 @@
 import { UseMutateAsyncFunction, useMutation, useQueryClient } from "@tanstack/react-query";
-import { createNetworkClient } from "../lib/core";
-import { useInternalZafClient } from "../lib/context";
-import { UpdateCustomObjectRecord } from "../types";
+import { createNetworkClient } from "../../lib/core";
+import { useInternalZafClient } from "../../lib/providers/custom-objects";
+import { UpdateCustomObjectRecord } from "../../types";
 
 
 type RequiredCustomObjectFields = {

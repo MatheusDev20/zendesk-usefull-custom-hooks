@@ -1,6 +1,6 @@
 import { useMutation, useQueryClient } from "@tanstack/react-query";
-import { useInternalZafClient } from "../lib/context";
-import { createNetworkClient } from "../lib/core";
+import { useInternalZafClient } from "../../lib/providers/custom-objects";
+import { createNetworkClient } from "../../lib/core";
 
 /**
  * Return type for the useDeleteCustomObjects hook
